@@ -22,6 +22,7 @@ contract Whitelist {
         if (numAddressesListed >= MaxAllowedWhiteList) {
             revert WhiteListFilled();
         }
+        
         WhiteListedAddresses[msg.sender] = true; //confirming the sneder from bool
         numAddressesListed++;
     }
